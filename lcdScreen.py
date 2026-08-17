@@ -5,13 +5,16 @@ from rpi_lcd import LCD
 lcd = LCD(address=0x27)
 
 class Page:
-  def __init__(self, carName, carBrand, time):
-    self.carName = carName
-    self.carBrand = carBrand
-    self.time = time
+  def __init__(self, carName, carBrand, time, date):
+    self.carName = str(carName)
+    self.carBrand = str(carBrand)
+    self.time = str(time)
+    self.date = str(date)
 
   def display(self):
-    pass
+    lcd.clear()
+    lcd.text(f"{self.carName}, {self.carBrand}", 1)      # Current line on top
+    lcd.text(self.date, 2)
   
 class PageHandler:
   def __init__(self):
