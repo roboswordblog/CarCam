@@ -36,7 +36,8 @@ class PageHandler:
           self.pageNum += 1
 
   def carUpdate():
-    pass
+    self.pageNum = 0
+    self.w
     
 
     
