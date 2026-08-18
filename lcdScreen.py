@@ -24,9 +24,19 @@ class PageHandler:
     self.pageNum = 0
   
   def update(self):
-    pass
+    self.pages[self.pageNum].display()
+    self.switch()
+  
+  def switch(self):
+    if self.button1.is_pressed():
+      if self.pageNum > len(self.pages):
+        self.pageNum = 0
+      
+      else:
+          self.pageNum += 1
 
-  def switch(dir):
+  def carUpdate():
     pass
+    
 
     
