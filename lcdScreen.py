@@ -13,7 +13,7 @@ class Page:
 
   def display(self):
     lcd.clear()
-    lcd.text(f"{self.carName}, {self.carBrand}", 1)      # Current line on top
+    lcd.text(f"{self.carName}, {self.carBrand}", 1)     
     lcd.text(self.date, 2)
   
 class PageHandler:
